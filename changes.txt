@@ -1,0 +1,160 @@
+新功能
+============
+
+此頁面總結了每次 Yii 發佈所導入的新功能。
+
+版本 1.1.11
+--------------
+ * [增加超文本傳輸協定快取](/doc/guide/caching.page#http-caching)
+ * [增加控制台應用程式終止碼](/doc/guide/topics.console#exit-codes)
+ * [增加模型黑名單機制](/doc/guide/form.model#declaring-validation-rules)
+ * [增加 Git 和 Hg 的支援](/doc/guide/quickstart.first-app#creating-your-first-yii-application)
+
+版本 1.1.8
+-------------	
+ * [增加自定網址規則類別](doc/guide/topics.url#using-custom-url-rule-classes)
+
+版本 1.1.7
+-------------
+ * [支援 RESTful URL](/doc/guide/topics.url#user-friendly-urls)
+ * [支援查詢快取](/doc/guide/caching.data#query-caching)
+ * [現在可以為關聯relational named scopes傳入參數](/doc/guide/database.arr#relational-query-with-named-scopes)
+ * [支持不通過相關模型來執行關聯表的查詢](/doc/guide/database.arr#performing-relational-query-without-getting-related-models)
+ * [支持對HAS_MANY和HAS_ONE多重關聯的查詢](/doc/guide/database.arr#relational-query-with-through)
+ * [支持數據庫遷移的事務](/doc/guide/database.migration#transactional-migrations)
+ * [支持對基於類的動作傳入參數](/doc/guide/basics.controller#action-parameter-binding)
+ * 支持使用[CActiveForm]對客戶端數據進行無縫數據驗證
+
+版本 1.1.6
+-------------
+ * [添加了查詢生成器](/doc/guide/database.query-builder)
+ * [添加了數據庫遷移](/doc/guide/database.migration)
+ * [MVC最佳實踐](/doc/guide/basics.best-practices)
+ * [添加了在控制台命令中使用匿名參數和全局選項](/doc/guide/topics.console)
+
+版本 1.1.5
+-------------
+
+ * [添加了對控制台命令的動作和參數綁定的支持](/doc/guide/topics.console)
+ * [添加了對自動調入命名空間類的支持](/doc/guide/basics.namespace)
+ * [添加了對視圖組件的主題支持](/doc/guide/topics.theming#theming-widget-views)
+
+版本 1.1.4
+-------------
+
+ * [添加了對 action 參數自動化綁定的支持](/doc/guide/basics.controller#action-parameter-binding)
+
+版本 1.1.3
+-------------
+
+ * [添加了對在應用配置中配置小物件默認值的支持](/doc/guide/topics.theming#customizing-widgets-globally)
+
+版本 1.1.2
+-------------
+
+ * [添加了一個被稱作 Gii 的基於 Web 的代碼生成工具](/doc/guide/topics.gii)
+
+版本 1.1.1
+-------------
+
+ * 添加了 CActiveForm ，它可以簡化表單相關代碼的編寫，並支持客戶端和服務器端一致且無縫的數據驗證。
+
+ * 重構了由 yiic 工具生成的代碼。具體的來說，現在生成的程序骨架應用具有多種佈局；
+ 操作菜單為 CRUD 頁面重新組織；新增由CRUD命令生成的管理員頁面中的搜索和過濾功能。
+ 並使用 CActiveForm 渲染表單。
+
+ * [新增對定義全局 yiic 命令的支持](/doc/guide/topics.console)
+
+版本 1.1.0
+-------------
+
+ * [增加了對編寫單元和功能測試的支持](/doc/guide/test.overview)
+
+ * [增加了支持使用 widget 皮膚](/doc/guide/topics.theming#skin)
+
+ * [增加了一個可擴展的 form builder](/doc/guide/form.builder)
+
+ * 改善了聲明安全模型屬性的方式。查看
+ [Securing Attribute Assignments](/doc/guide/form.model#securing-attribute-assignments).
+
+ * 為關聯 active record 查詢更改了默認的 eager 載入算法以便所有的表被連接到一個單獨的 SQL 語句中。
+
+ * 更改默認的表別名為 active record 關聯的名字。
+
+ * [增加對使用表前綴的支持](/doc/guide/database.dao#using-table-prefix).
+
+ * 增加了一個新的擴展集 [Zii library](http://code.google.com/p/zii/).
+
+ * 在一個 AR 查詢中主表的別名確定為 `t`
+
+版本 1.0.11
+--------------
+
+ * 增加支持以參數化後的主機名解析和創建 URL 
+     - [Parameterizing Hostnames](/doc/guide/topics.url#parameterizing-hostnames)
+
+
+版本 1.0.10
+--------------
+
+ * 增強了支持使用 CPhpMessageSource 管理模塊信息
+     - [信息翻譯](/doc/guide/topics.i18n#message-translation)
+
+ * 增加支持關聯匿名函數作為 event handlers
+     - [組件事件](/doc/guide/basics.component#component-event)
+
+版本 1.0.8
+-------------
+
+ * 增加支持同時檢索多個緩存值
+	 - [數據緩存](/doc/guide/caching.data)
+
+ * 引入了一個新的默認根路徑別名 ext ，它指向含有所有第三方擴展的目錄。
+	 - [使用擴展](/doc/guide/extension.use)
+
+版本 1.0.7
+-------------
+
+ * 增加了在跟蹤信息中支持顯示調用棧 
+     - [記錄上下文信息](/doc/guide/topics.logging#logging-context-information)
+
+ * 增加了 `index` 選項到 AR 關聯，以便被關聯的對象可以被使用一個指定字段的值索引
+     - [關聯查詢選項](/doc/guide/database.arr#relational-query-options)
+
+版本 1.0.6
+-------------
+
+ * 增加在 `update` 和 `delete` 方法使用命名空間的支持：
+     - [命名空間](/doc/guide/database.ar#named-scopes)
+
+ * 增加支持在關聯規則的 `with` 選項中使用命名空間：
+     - [使用命名空間進行關聯查詢](/doc/guide/database.arr#relational-query-with-named-scopes)
+
+ * 增加支持 profiling SQL executions
+     - [Profiling SQL Executions](/doc/guide/topics.logging#profiling-sql-executions)
+
+ * 增加記錄額外上下文信息支持
+     - [Logging Context Information](/doc/guide/topics.logging#logging-context-information)
+
+ * 增加通過設置它的 urlFormat 和 caseSensitive 選項來定制一個單獨的 URL 規則：
+     - [對用戶友好的 URL](/doc/guide/topics.url#user-friendly-urls)
+
+ * 增加了支持使用一個controller action 顯示應用錯誤：
+     - [使用 Action 管理錯誤](/doc/guide/topics.error#handling-errors-using-an-action)
+
+版本 1.0.5
+-------------
+
+ * 通過支持命名空間增強了 active record。查看：
+     - [命名空間](/doc/guide/database.ar#named-scopes)
+     - [默認命名空間](/doc/guide/database.ar#default-named-scope)
+     - [使用命名空間進行關聯查詢](/doc/guide/database.arr#relational-query-with-named-scopes)
+
+
+ * 增強了 active record ，支持 lazy loading with dynamic query options。 查看：
+     - [動態關聯查詢選項](/doc/guide/database.arr#dynamic-relational-query-options)
+
+ * 增強了 [CUrlManager] ，支持URL規則中的 route 部分。查看：
+     - [Parameterizing Routes in URL Rules](/doc/guide/topics.url#parameterizing-routes)
+
+<div class="revision">$Id: changes.txt 2340 2012-02-28 03:26:19Z dongbeta@qq.com $</div>
